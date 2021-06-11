@@ -1,0 +1,2982 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kimerce.Backend</name>
+    </assembly>
+    <members>
+        <member name="T:Kimerce.Backend.Controllers.AttributeController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa thuộc tính sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm thuộc tính sản phẩm
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Attributes.AttributeModel)">
+            <summary>
+            Tạo / cập nhật thuộc tính sản phẩm
+            </summary>
+            <param name="Attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin thuộc tính sản phẩm
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>Attribute object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeController.Delete(System.Int32)">
+            <summary>
+            Xóa thuộc tính sản phẩm
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.AttributeValueController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa giá trị thuộc tính
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeValueController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm giá trị thuộc tính
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeValueController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Attributes.AttributeValueModel)">
+            <summary>
+            Tạo / cập nhật giá trị thuộc tính
+            </summary>
+            <param name="AttributeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeValueController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin giá trị thuộc tính
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>AttributeValue object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.AttributeValueController.Delete(System.Int32)">
+            <summary>
+            Xóa giá trị thuộc tính
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.InventoryAttributeController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa thuộc tính kho
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.InventoryAttributeController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm thuộc tính kho
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.InventoryAttributeController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Attributes.InventoryAttributeModel)">
+            <summary>
+            Tạo / cập nhật thuộc tính kho
+            </summary>
+            <param name="InventoryAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.InventoryAttributeController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin thuộc tính kho
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>InventoryAttribute object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.InventoryAttributeController.Delete(System.Int32)">
+            <summary>
+            Xóa thuộc tính kho
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.SpecAttributeController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa thuộc tính kỹ thuật
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.SpecAttributeController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm thuộc tính kỹ thuật
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.SpecAttributeController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Attributes.SpecAttributeModel)">
+            <summary>
+            Tạo / cập nhật thuộc tính kỹ thuật
+            </summary>
+            <param name="SpecAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.SpecAttributeController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin thuộc tính kỹ thuật
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>SpecAttribute object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.SpecAttributeController.Delete(System.Int32)">
+            <summary>
+            Xóa thuộc tính kỹ thuật
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.CampaignOrderController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignOrderController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm chiến dịch
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignOrderController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Campaigns.CampaignOrderModel)">
+            <summary>
+            Tạo / cập nhật chiến dịch
+            </summary>
+            <param name="campaignOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignOrderController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin chiến dịch
+            </summary>
+            <param name="id">Id của chiến dịch</param>
+            <returns>CampaignOrder object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignOrderController.Delete(System.Int32)">
+            <summary>
+            Xóa chiến dịch
+            </summary>
+            <param name="id">Mã chiến dịch cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.CampaignProductController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignProductController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm chiến dịch
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignProductController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Campaigns.CampaignProductModel)">
+            <summary>
+            Tạo / cập nhật chiến dịch
+            </summary>
+            <param name="campaignProduct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignProductController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin chiến dịch
+            </summary>
+            <param name="id">Id của chiến dịch</param>
+            <returns>CampaignProduct object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CampaignProductController.Delete(System.Int32)">
+            <summary>
+            Xóa chiến dịch
+            </summary>
+            <param name="id">Mã chiến dịch cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.DiscountController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm giảm giá
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Campaigns.DiscountModel)">
+            <summary>
+            Tạo / cập nhật giảm giá
+            </summary>
+            <param name="discount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin giảm giá
+            </summary>
+            <param name="id">Id của giảm giá</param>
+            <returns>Discount object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountController.Delete(System.Int32)">
+            <summary>
+            Xóa giảm giá
+            </summary>
+            <param name="id">Mã giảm giá cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.DiscountOrderController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountOrderController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm chiến dịch
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountOrderController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Campaigns.DiscountOrderModel)">
+            <summary>
+            Tạo / cập nhật chiến dịch
+            </summary>
+            <param name="discountOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountOrderController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin chiến dịch
+            </summary>
+            <param name="id">Id của chiến dịch</param>
+            <returns>DiscountOrder object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DiscountOrderController.Delete(System.Int32)">
+            <summary>
+            Xóa chiến dịch
+            </summary>
+            <param name="id">Mã chiến dịch cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.CitiesController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa thành phố
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm thành phố
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Categories.CityModel)">
+            <summary>
+            Tạo / cập nhật thành phố
+            </summary>
+            <param name="city"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin thành phố
+            </summary>
+            <param name="id">Id của thành phố</param>
+            <returns>City object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.GetChildren(System.Int32)">
+            <summary>
+            Lấy danh sách huyện thuộc thành phố
+            </summary>
+            <param name="id">Id của thành phố</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.Delete(System.Int32)">
+            <summary>
+            Xóa thành phố
+            </summary>
+            <param name="id">Mã thành phố cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.ExportToXlsxAsync(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Xuất ra file excel
+            </summary>
+            <param name="param">Danh sách</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.CitiesController.Download">
+            <summary>
+            Download file excel
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.DistrictsController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa quận
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm quận
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Categories.DistrictModel)">
+            <summary>
+            Tạo / cập nhật quận
+            </summary>
+            <param name="district"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin quận
+            </summary>
+            <param name="id">Id của quận</param>
+            <returns>District object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.GetChildren(System.Int32)">
+            <summary>
+            Lấy danh sách xã thuộc huyện
+            </summary>
+            <param name="id">Id của huyện</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.Delete(System.Int32)">
+            <summary>
+            Xóa quận
+            </summary>
+            <param name="id">Mã quận cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.ExportToXlsxAsync(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Xuất ra file excel
+            </summary>
+            <param name="param">Danh sách</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.DistrictsController.Download">
+            <summary>
+            Download file excel
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.WardsController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa phường
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm phường
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Categories.WardModel)">
+            <summary>
+            Tạo / cập nhật phường
+            </summary>
+            <param name="ward"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin phường
+            </summary>
+            <param name="id">Id của phường</param>
+            <returns>Ward object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.GetChildren(System.Int32)">
+            <summary>
+            Lấy danh sách nhà kho thuộc xã
+            </summary>
+            <param name="id">Id của xã</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.Delete(System.Int32)">
+            <summary>
+            Xóa phường
+            </summary>
+            <param name="id">Mã phường cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.ExportToXlsxAsync(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Xuất ra file excel
+            </summary>
+            <param name="param">Danh sách</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WardsController.Download">
+            <summary>
+            Download file excel
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.WareHousesController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa nhà kho
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm nhà kho
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Categories.WareHouseModel)">
+            <summary>
+            Tạo / cập nhật nhà kho
+            </summary>
+            <param name="wareHouse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin nhà kho
+            </summary>
+            <param name="id">Id của nhà kho</param>
+            <returns>WareHouse object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.Delete(System.Int32)">
+            <summary>
+            Xóa nhà kho
+            </summary>
+            <param name="id">Mã nhà kho cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.ExportToXlsxAsync(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Xuất ra file excel
+            </summary>
+            <param name="param">Danh sách</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.WareHousesController.Download">
+            <summary>
+            Download file excel
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.NewsController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa blog
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm blog
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsController.CreateOrUpdate(Kimerce.Backend.Dto.Items.News.NewsModel)">
+            <summary>
+            Tạo / cập nhật blog
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin blog
+            </summary>
+            <param name="id">Id của blog</param>
+            <returns>Blog object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsController.Delete(System.Int32)">
+            <summary>
+            Xóa blog
+            </summary>
+            <param name="id">Mã blog cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.NewsImageController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa blog liên quan
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm ảnh 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.GetImageByNews(System.Int32)">
+            <summary>
+            Lấy ảnh cụ thể của 1 blog
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin liên kết ảnh
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.CreateOrUpdate(Kimerce.Backend.Dto.Models.News.NewsImageModel)">
+            <summary>
+            Tạo / Cập nhật liên kết ảnh
+            </summary>
+            <param name="ProductImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.Delete(System.Int32)">
+            <summary>
+            Xóa liên kết ảnh
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.NewsImageController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Xóa liên kết ảnh
+            </summary>
+            <param name="id1"></param>
+            <param name="id2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Notifications.NotificationController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm thông báo
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Notifications.NotificationController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Notification.NotificationModel)">
+            <summary>
+            Tạo / cập nhật thông báo
+            </summary>
+            <param name="notification"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Notifications.NotificationController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin thông báo
+            </summary>
+            <param name="id">Id của thông báo</param>
+            <returns>Product object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Notifications.NotificationController.Delete(System.Int32)">
+            <summary>
+            Xóa thông báo
+            </summary>
+            <param name="id">Mã thông báo cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.ProductCategoryController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa danh mục sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductCategoryController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh mục sản phẩm
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductCategoryController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin sản phẩm
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductCategoryController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Products.ProductCategoryModel)">
+            <summary>
+            Tạo / Cập nhật sản phẩm
+            </summary>
+            <param name="productCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductCategoryController.Delete(System.Int32)">
+            <summary>
+            Xóa sản phẩm
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.ProductController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductController.GetRelate(System.Int32)">
+            <summary>
+            Lấy sản phẩm liên quan
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm sản phẩm
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Products.ProductModel)">
+            <summary>
+            Tạo / cập nhật sản phẩm
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin sản phẩm
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>Product object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Xóa sản phẩm
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.ProductImage">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa blog liên quan
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm ảnh 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.GetImageByProduct(System.Int32)">
+            <summary>
+            Lấy ảnh cụ thể của 1 sản phẩm
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.Get(System.Int32)">
+            <summary>
+            Lấy thông tin liên kết ảnh
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.CreateOrUpdate(Kimerce.Backend.Dto.Models.Products.ProductImageModel)">
+            <summary>
+            Tạo / Cập nhật liên kết ảnh
+            </summary>
+            <param name="ProductImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.Delete(System.Int32)">
+            <summary>
+            Xóa liên kết ảnh
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductImage.Delete(System.Int32,System.Int32)">
+            <summary>
+            Xóa liên kết ảnh
+            </summary>
+            <param name="id1"></param>
+            <param name="id2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.ProductPieceController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa đơn vị sản phẩm
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductPieceController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm đơn vị sản phẩm
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductPieceController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Products.ProductPieceModel)">
+            <summary>
+            Tạo / cập nhật đơn vị sản phẩm
+            </summary>
+            <param name="ProductPiece"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductPieceController.Get(System.Int64)">
+            <summary>
+            Lấy thông tin đơn vị sản phẩm
+            </summary>
+            <param name="id">Id của sản phẩm</param>
+            <returns>ProductPiece object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.ProductPieceController.Delete(System.Int32)">
+            <summary>
+            Xóa đơn vị sản phẩm
+            </summary>
+            <param name="id">Mã sản phẩm cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.RelateProductController">
+            <summary>
+            API tìm kiếm, thêm, sửa, xóa sản phẩm liên quan
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.RelateProductController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm sản phẩm liên quan
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.RelateProductController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin sản phẩm liên quan
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.RelateProductController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Products.RelateProductModel)">
+            <summary>
+            Tạo / Cập nhật sản phẩm liên quan
+            </summary>
+            <param name="relateProduct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.RelateProductController.Delete(System.Int32)">
+            <summary>
+            Xóa sản phẩm liên quan bằng id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.RelateProductController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Xóa sản phẩm liên quan
+            </summary>
+            <param name="id1"></param>
+            <param name="id2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.Shipments.ShipmentItemsController">
+            <summary>
+            Thêm, sửa, xóa item đơn vận
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentItemsController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm đơn item vận
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentItemsController.GetById(System.Int32)">
+            <summary>
+            Chi tiết đơn item vận
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentItemsController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Shipments.ShipmentItemModel)">
+            <summary>
+            Tạo / Cập nhật item đơn vận
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentItemsController.Delete(System.Int32)">
+            <summary>
+            Xóa đơn item vận
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kimerce.Backend.Controllers.Shipments.ShipmentsController">
+            <summary>
+            Thêm, Sửa, Xóa đơn hàng
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentsController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm đơn hàng
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentsController.Get(System.Int32)">
+            <summary>
+            Chi tiết đơn hàng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentsController.CreateOrUpdate(Kimerce.Backend.Dto.Models.Shipments.ShipmentModel)">
+            <summary>
+            Tạo / Cập nhật đơn hàng
+            </summary>
+            <param name="shipment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Shipments.ShipmentsController.Delete(System.Int32)">
+            <summary>
+            Xóa đơn hàng
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Trackings.TrackingController.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm lịch sử
+            </summary>
+            <param name="param">Tham số dạng smarttable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Trackings.TrackingController.CreateOrUpdate(Kimerce.Backend.Domain.Tracking.Tracking)">
+            <summary>
+            Tạo / cập nhật lịch sử
+            </summary>
+            <param name="track"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Trackings.TrackingController.Get(System.Int32)">
+            <summary>
+            Lấy thông tin lịch sử
+            </summary>
+            <param name="id">Id của lịch sử</param>
+            <returns>Product object</returns>
+        </member>
+        <member name="M:Kimerce.Backend.Controllers.Trackings.TrackingController.Delete(System.Int32)">
+            <summary>
+            Xóa lịch sử
+            </summary>
+            <param name="id">Mã lịch sử cần xóa</param>
+            <returns></returns>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Attributes.Attribute.Name">
+            <summary>
+            Tên thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Attributes.Attribute.Description">
+            <summary>
+            Mô tả thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Attributes.AttributeValue.AttributeId">
+            <summary>
+            Mã thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Attributes.AttributeValue.Value">
+            <summary>
+            Giá trị
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Domain.BaseEntities.BaseEntity">
+            <summary>
+            Thực thể chung
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.BaseEntities.BaseEntity.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.BaseEntities.BaseEntity.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Domain.BaseEntities.BaseEntityByInt">
+            <summary>
+            Thực thể chỉ được tạo bởi người dùng
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Domain.BaseEntities.BaseEntityInt">
+            <summary>
+            Thực thể có mã kiểu uint
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.Subject">
+            <summary>
+            Tên chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.Body">
+            <summary>
+            Mô tả chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.EndDate">
+            <summary>
+            Ngày két thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.Budget">
+            <summary>
+            Ngân sách
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Campaign.Status">
+            <summary>
+            Tiến độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignOrder.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignOrder.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignOrder.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignProduct.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignProduct.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.CampaignProduct.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.Name">
+            <summary>
+            Tên mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.UsePercentage">
+            <summary>
+            Sử dụng % hay không
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.DiscountPercentage">
+            <summary>
+            % giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.DiscountAmount">
+            <summary>
+            Số lượng giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.MaxDiscountAmount">
+            <summary>
+            Giá trị giảm tối đa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.EndDate">
+            <summary>
+            Ngày két thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.RequireCouponCode">
+            <summary>
+            Yêu cầu mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.CouponCode">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.Discount.Quantity">
+            <summary>
+            Số lượng mã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.DiscountOrder.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Campaigns.DiscountOrder.DiscountId">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.BaseCategory.Name">
+            <summary>
+            Tên
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.BaseCategory.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.City.Districts">
+            <summary>
+            Danh sách huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.Location.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.Location.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Categories.Location.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.District.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.District.City">
+            <summary>
+            Tỉnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.District.Wards">
+            <summary>
+            Danh sách xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.Ward.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.Ward.District">
+            <summary>
+            Huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Locations.Ward.WareHouses">
+            <summary>
+            Danh sách nhà kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.ParentId">
+            <summary>
+            Id Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.Ward">
+            <summary>
+            Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.Address">
+            <summary>
+            Địa chỉ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.Latitude">
+            <summary>
+            Vĩ độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.Longtitude">
+            <summary>
+            Kinh Độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.PhoneNumber">
+            <summary>
+            Số điện thoại người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.WareHouse.WareHouse.ContactName">
+            <summary>
+            Tên người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.Title">
+            <summary>
+            Tiêu đề
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.Description">
+            <summary>
+            Nội dung
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.Status">
+            <summary>
+            Trạng thái blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.PublishDate">
+            <summary>
+            Ngày công bố
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.StartDate">
+            <summary>
+            Ngày bắt đầu có hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.News.EndDate">
+            <summary>
+            Ngày hết hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.NewsImage.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.NewsImage.NewsId">
+            <summary>
+            Mã blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.NewsImage.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.NewsImage.News">
+            <summary>
+            Blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.News.NewsImage.Image">
+            <summary>
+            Hình ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.Title">
+            <summary>
+            Tên thông báo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.SubTitle">
+            <summary> 
+            Tên thông báo rút gọn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.Link">
+            <summary>
+            Tên đường link 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.UserId">
+            <summary>
+            Id người dùng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.HasSub">
+            <summary>
+            Có bao gồm không 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.TypeId">
+            <summary>
+            Id loại 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.IsRead">
+            <summary>
+            Đã đọc chưa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.ReadDate">
+            <summary>
+            Thời gian đọc 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.ExpriedDate">
+            <summary>
+            Thời gian hiệu lực 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Notification.Notification.NoticationConfigld">
+            <summary>
+            Id của cấu hình 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.Name">
+            <summary>
+            Tên sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.Sku">
+            <summary>
+            Mã SKU
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.Price">
+            <summary>
+            Giá bán
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.OldPrice">
+            <summary>
+            Giá cũ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.CallForPrice">
+            <summary>
+            Gọi để biết giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.Status">
+            <summary>
+            Trạng thái sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.RelateChildren">
+            <summary>
+            Các sản phẩm liên quan
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.Product.RelateParent">
+            <summary>
+            Chưa nghĩ ra chú thích .-.
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.Status">
+            <summary>
+            Trạng thái danh mục
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.DefaultPageSize">
+            <summary>
+            Giá trị phân trang mặc định
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.PageSizeOptions">
+            <summary>
+            Danh sách phân trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.PriceRanges">
+            <summary>
+            Phân khúc giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.ParentId">
+            <summary>
+            Mã danh mục cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.IsActive">
+            <summary>
+            Kích hoạt
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.Parent">
+            <summary>
+            Danh mục cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductCategory.Children">
+            <summary>
+            Danh mục con
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Domain.Products.ProductImage">
+            <summary>
+            Liên kết ản-sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductImage.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductImage.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductImage.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductImage.Product">
+            <summary>
+            Sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductImage.Image">
+            <summary>
+            Hình ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductPiece.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductPiece.InventoryAttributeId">
+            <summary>
+            Mã thuộc tính tốn kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductPiece.AttributeValueId">
+            <summary>
+            Mã giá trị thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.ProductPiece.Quantity">
+            <summary>
+            Sỗ lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.RelateProduct.ProductIdA">
+            <summary>
+            Mã A
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.RelateProduct.ProductIdB">
+            <summary>
+            Mã B
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.RelateProduct.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.RelateProduct.ProductA">
+            <summary>
+            Sản phẩm A
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Products.RelateProduct.ProductB">
+            <summary>
+            Sản phẩn B
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.OrderId">
+            <summary>
+             Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.TrackingNumber">
+            <summary>
+            Code tracking đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.TotalWeight">
+            <summary>
+            Tổng trọng lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.DeliveryStatus">
+            <summary>
+            Trạng thái giao hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.CompleteDate">
+            <summary>
+            Ngày giao hàng thành công
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.HandoverDate">
+            <summary>
+            Ngày bàn giao hàng hóa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.Shipment.shipmentItem">
+            <summary>
+            Đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.ShipmentItem.ShipmentId">
+            <summary>
+            Mã đơn vận chuyển
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.ShipmentItem.OrderItemId">
+            <summary>
+            Mã item của đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.ShipmentItem.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Shipments.ShipmentItem.shipment">
+            <summary>
+            Mã kho hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Tracking.Tracking.Title">
+            <summary>
+            Tên lịch sử
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Tracking.Tracking.SubTitle">
+            <summary>
+            Tên lịch sử gọn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Tracking.Tracking.EntityId">
+            <summary>
+            Id thực thể 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Tracking.Tracking.EnType">
+            <summary>
+            Loại thực thể 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Domain.Tracking.Tracking.AcType">
+            <summary>
+            Kiểu hành động
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.AutoMapperConfig.Mapper">
+            <summary>
+            Mapper
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.AutoMapperConfig.MapperConfiguration">
+            <summary>
+            Mapper configuration
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeItem.Name">
+            <summary>
+            Tên thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeItem.Description">
+            <summary>
+            Mô tả thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeValueItem.AttributeId">
+            <summary>
+            Mã thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeValueItem.Value">
+            <summary>
+            Giá trị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeValueItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Attributes.AttributeValueItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.Subject">
+            <summary>
+            Tên chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.Body">
+            <summary>
+            Mô tả chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.EndDate">
+            <summary>
+            Ngày kết thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.Budget">
+            <summary>
+            Ngân sách
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignItem.Status">
+            <summary>
+            Tiến độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignOrderItem.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignOrderItem.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignOrderItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignProductItem.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignProductItem.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.CampaignProductItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.Name">
+            <summary>
+            Tên mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.UsePercentage">
+            <summary>
+            Sử dụng % hay không
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.DiscountPercentage">
+            <summary>
+            % giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.DiscountAmount">
+            <summary>
+            Số lượng giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.MaxDiscountAmount">
+            <summary>
+            Giá trị giảm tối đa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.EndDate">
+            <summary>
+            Ngày kết thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.RequireCouponCode">
+            <summary>
+            Yêu cầu mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.CouponCode">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountItem.Quantity">
+            <summary>
+            Số lượng mã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountOrderItem.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Campaigns.DiscountOrderItem.DiscountId">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.City">
+            <summary>
+            Tỉnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.Wards">
+            <summary>
+            Danh sách xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.DistrictItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.District">
+            <summary>
+            Huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.WareHouses">
+            <summary>
+            Danh sách nhà kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Locations.WardItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.ParentId">
+            <summary>
+            Id Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.Ward">
+            <summary>
+            Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.Address">
+            <summary>
+            Địa chỉ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.Latitude">
+            <summary>
+            Vĩ độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.Longtitude">
+            <summary>
+            Kinh Độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.PhoneNumber">
+            <summary>
+            Số điện thoại người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.ContactName">
+            <summary>
+            Tên người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Categories.WareHouse.WareHouseItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Images.ImageItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsImageItem.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsImageItem.NewsId">
+            <summary>
+            Mã blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsImageItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.Title">
+            <summary>
+            Tiêu đề
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.Description">
+            <summary>
+            Nội dung
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.Status">
+            <summary>
+            Trạng thái blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.PublishDate">
+            <summary>
+            Ngày công bố
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.StartDate">
+            <summary>
+            Ngày bắt đầu có hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.EndDate">
+            <summary>
+            Ngày hết hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.Title">
+            <summary>
+            Tiêu đề
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.Description">
+            <summary>
+            Nội dung
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.Status">
+            <summary>
+            Trạng thái blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.PublishDate">
+            <summary>
+            Ngày công bố
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.StartDate">
+            <summary>
+            Ngày bắt đầu có hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.News.NewsModel.EndDate">
+            <summary>
+            Ngày hết hiệu lực
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.Title">
+            <summary>
+            Tên thông báo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.SubTitle">
+            <summary> 
+            Tên thông báo rút gọn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.Link">
+            <summary>
+            Tên đường link 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.UserId">
+            <summary>
+            Id người dùng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.TypeId">
+            <summary>
+            Id loại 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.IsRead">
+            <summary>
+            Đã đọc chưa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Notification.NotificationItem.ReadDate">
+            <summary>
+            Thời gian đọc 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.Status">
+            <summary>
+            Trạng thái danh mục
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.DefaultPageSize">
+            <summary>
+            Giá trị phân trang mặc định
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.PageSizeOptions">
+            <summary>
+            Danh sách phân trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.PriceRanges">
+            <summary>
+            Phân khúc giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.ParentId">
+            <summary>
+            Mã danh mục cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.IsActive">
+            <summary>
+            Kích hoạt
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.Name">
+            <summary>
+            Tên danh mục
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductCategoryItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductImageItem.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductImageItem.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductImageItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.Name">
+            <summary>
+            Tên sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.Sku">
+            <summary>
+            Mã SKU
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.Price">
+            <summary>
+            Giá bán
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.OldPrice">
+            <summary>
+            Giá cũ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.CallForPrice">
+            <summary>
+            Gọi để biết giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.Status">
+            <summary>
+            Trạng thái sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductPieceItem.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductPieceItem.InventoryAttributeId">
+            <summary>
+            Mã thuộc tính tốn kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductPieceItem.AttributeValueId">
+            <summary>
+            Mã giá trị thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.ProductPieceItem.Quantity">
+            <summary>
+            Sỗ lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.RelateProductItem.ProductIdA">
+            <summary>
+            Mã A
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.RelateProductItem.ProductIdB">
+            <summary>
+            Mã B
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.RelateProductItem.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.RelateProductItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Products.RelateProductItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.ShipmentId">
+            <summary>
+            Mã đơn vận chuyển
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.OrderItemId">
+            <summary>
+            Mã item của đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.WareHouseId">
+            <summary>
+            Mã kho hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.ShipmentItem_Item.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.OrderId">
+            <summary>
+             Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.TrackingNumber">
+            <summary>
+            Code tracking đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.TotalWeight">
+            <summary>
+            Tổng trọng lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.DeliveryStatus">
+            <summary>
+            Trạng thái giao hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.CompleteDate">
+            <summary>
+            Ngày giao hàng thành công
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.HandoverDate">
+            <summary>
+            Ngày bàn giao hàng hóa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Shipments.Shipment_Item.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Tracking.TrackingItem.Title">
+            <summary>
+            Tên lịch sử
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Tracking.TrackingItem.SubTitle">
+            <summary>
+            Tên lịch sử rút gọn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Tracking.TrackingItem.EntityId">
+            <summary>
+            Id thực thể 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Tracking.TrackingItem.EntityType">
+            <summary>
+            Kiểu thực thể 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Items.Tracking.TrackingItem.ActionType">
+            <summary>
+            Kiểu hành động 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.Districts">
+            <summary>
+            Danh sách huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.CreatedTime">
+            <summary>
+            Ngày tạo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Categories.CityItem.UpdatedTime">
+            <summary>
+            Ngày cập nhật
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Attributes.AttributeModel.Name">
+            <summary>
+            Tên thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Attributes.AttributeModel.Description">
+            <summary>
+            Mô tả thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Attributes.AttributeValueModel.AttributeId">
+            <summary>
+            Mã thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Attributes.AttributeValueModel.Value">
+            <summary>
+            Giá trị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.Subject">
+            <summary>
+            Tên chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.Body">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.Budget">
+            <summary>
+            Budget
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.EndDate">
+            <summary>
+            Ngày kết thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignModel.Status">
+            <summary>
+            Trạng thái 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignOrderModel.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignOrderModel.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignOrderModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignProductModel.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignProductModel.CampaignId">
+            <summary>
+            Mã chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.CampaignProductModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.Name">
+            <summary>
+            Tên chiến dịch
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.UsePercentage">
+            <summary>
+            Sử dụng % hay không
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.DiscountPercentage">
+            <summary>
+            % giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.DiscountAmount">
+            <summary>
+            Số lượng giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.MaxDiscountAmount">
+            <summary>
+            Giá trị giảm tối đa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.StartDate">
+            <summary>
+            Ngày bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.EndDate">
+            <summary>
+            Ngày két thúc
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.RequireCouponCode">
+            <summary>
+            Yêu cầu mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountModel.CouponCode">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountOrderModel.OrderId">
+            <summary>
+            Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Campaigns.DiscountOrderModel.DiscountId">
+            <summary>
+            Mã giảm giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.BaseCategoryModel.Name">
+            <summary>
+            Tên 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.BaseCategoryModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.Status">
+            <summary>
+            Trạng thái danh mục
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.DefaultPageSize">
+            <summary>
+            Giá trị phân trang mặc định
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.PageSizeOptions">
+            <summary>
+            Danh sách phân trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.PriceRanges">
+            <summary>
+            Phân khúc giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.ParentId">
+            <summary>
+            Mã danh mục cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.IsActive">
+            <summary>
+            Kích hoạt
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.Name">
+            <summary>
+            Tên danh mục
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductCategoryModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductImageModel.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductImageModel.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductImageModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.Name">
+            <summary>
+            Tên sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.ShortDescription">
+            <summary>
+            Mô tả ngắn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.Description">
+            <summary>
+            Mô tả đầy đủ (HTML)
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.Sku">
+            <summary>
+            Mã SKU
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.Price">
+            <summary>
+            Giá bán
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.OldPrice">
+            <summary>
+            Giá cũ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.CallForPrice">
+            <summary>
+            Gọi để biết giá
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductModel.Status">
+            <summary>
+            Trạng thái sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductPieceModel.ProductId">
+            <summary>
+            Mã sản phẩm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductPieceModel.InventoryAttributeId">
+            <summary>
+            Mã thuộc tính tốn kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductPieceModel.AttributeValueId">
+            <summary>
+            Mã giá trị thuộc tính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.ProductPieceModel.Quantity">
+            <summary>
+            Sỗ lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.RelateProductModel.ProductIdA">
+            <summary>
+            Mã A
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.RelateProductModel.ProductIdB">
+            <summary>
+            Mã B
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Products.RelateProductModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.CityModel.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.CityModel.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.CityModel.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.CityModel.Districts">
+            <summary>
+            Danh sách huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.City">
+            <summary>
+            Tỉnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.DistrictModel.Wards">
+            <summary>
+            Danh sách xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.Code">
+            <summary>
+            Mã hành chính
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.UnsignName">
+            <summary>
+            Tên không dấu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.CityRealm">
+            <summary>
+            Miền
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.ParentId">
+            <summary>
+            ID cha
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.District">
+            <summary>
+            Huyện
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WardModel.WareHouses">
+            <summary>
+            Danh sách nhà kho
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.ParentId">
+            <summary>
+            Id Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.Ward">
+            <summary>
+            Xã
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.Address">
+            <summary>
+            Địa chỉ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.Latitude">
+            <summary>
+            Vĩ độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.Longtitude">
+            <summary>
+            Kinh độ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.PhoneNumber">
+            <summary>
+            Số điện thoại người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Categories.WareHouseModel.ContactName">
+            <summary>
+            Tên người liên hệ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.News.NewsImageModel.ImageId">
+            <summary>
+            Mã ảnh
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.News.NewsImageModel.NewsId">
+            <summary>
+            Mã Blog
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.News.NewsImageModel.DisplayOrder">
+            <summary>
+            Thứ tự hiển thị
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.Title">
+            <summary>
+            Tên thông báo
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.SubTitle">
+            <summary> 
+            Tên thông báo rút gọn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.Link">
+            <summary>
+            Tên đường link 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.UserId">
+            <summary>
+            Id người dùng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.TypeId">
+            <summary>
+            Id loại 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.IsRead">
+            <summary>
+            Đã đọc chưa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Notification.NotificationModel.ReadDate">
+            <summary>
+            Thời gian đọc 
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentItemModel.ShipmentId">
+            <summary>
+            Mã đơn vận chuyển
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentItemModel.OrderItemId">
+            <summary>
+            Mã item của đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentItemModel.Quantity">
+            <summary>
+            Số lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentItemModel.WareHouseId">
+            <summary>
+            Mã kho hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.OrderId">
+            <summary>
+             Mã đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.TrackingNumber">
+            <summary>
+            Code tracking đơn hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.TotalWeight">
+            <summary>
+            Tổng trọng lượng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.DeliveryStatus">
+            <summary>
+            Trạng thái giao hàng
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.CompleteDate">
+            <summary>
+            Ngày giao hàng thành công
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Shipments.ShipmentModel.HandoverDate">
+            <summary>
+            Ngày bàn giao hàng hóa
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Tracking.TrackingModel.Title">
+            <summary>
+            Tên lịch sử
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Tracking.TrackingModel.SubTitle">
+            <summary>
+            Tên lịch sử gịn
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Tracking.TrackingModel.EntityId">
+            <summary>
+            Id thực thể
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Tracking.TrackingModel.EntityType">
+            <summary>
+            Kiểu thực thể
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Models.Tracking.TrackingModel.ActionType">
+            <summary>
+            Kiểu hành động
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Results.BaseResult.Result">
+            <summary>
+            Kết quả
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Results.BaseResult.Message">
+            <summary>
+            Thông điệp
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Results.CreateOrUpdateResultInt.Id">
+            <summary>
+            id trả về
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Dto.Results.CreateOrUpdateResultLong.Id">
+            <summary>
+            id trả về
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Campaigns.ICampaignService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm chiến dịch
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Campaigns.ICampaignService.Get(System.Int32)">
+            <summary>
+            Lấy thông tin chiến dịch
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Campaigns.ICampaignService.CreateOrUpdate(Kimerce.Backend.Dto.Items.Campaigns.CampaignItem)">
+            <summary>
+            Tạo / cập nhật chiến dịch
+            </summary>
+            <param name="campaignItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Campaigns.ICampaignService.Delete(System.Int32)">
+            <summary>
+            Xóa chiến dịch
+            </summary>
+            <param name="campaignItemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Campaigns.CampaignService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Categories.CityService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Categories.DistrictService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Categories.WardService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Categories.WareHouseService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.EmailService.EmailAccountService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.EmailService.EmailProviderService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.EmailService.EmailService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.EmailService.EmailTemplateService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Images.IImageService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm Image
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Images.IImageService.CreateOrUpdate(Kimerce.Backend.Dto.Models.Images.ImageModel,System.Int32,System.String)">
+            <summary>
+            Tạo / cập nhật Image
+            </summary>
+            <param name="model"></param>
+            <param name="updateBy"></param>
+            <param name="updateByUserName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Images.IImageService.Delete(System.Int32)">
+            <summary>
+            Xóa Image
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Images.IImageService.Get(System.Int32)">
+            <summary>
+            Lấy thông tin image
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Notifications.NotificationService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.SettingService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kimerce.Backend.Infrastructure.Services.Trackings.TrackingService.Search(Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam)">
+            <summary>
+            Tìm kiếm danh sách DC
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.From">
+            <summary>
+            Từ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.PageIndex">
+            <summary>
+            Trang thứ
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.PageSize">
+            <summary>
+            Kích thước trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.Total">
+            <summary>
+            Tổng số bản ghi
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.TotalPages">
+            <summary>
+            Tổng số trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.Start">
+            <summary>
+            Bản ghi bắt đầu
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.Pagination.TotalItemCount">
+            <summary>
+            Tổng số lượng bản ghi
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam">
+            <summary>
+            Tham số tìm kiếm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam.Pagination">
+            <summary>
+            Phân trang
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam.Search">
+            <summary>
+            Điều kiện tìm kiếm
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam.Sort">
+            <summary>
+            Điều kiện sắp xếp
+            </summary>
+        </member>
+        <member name="P:Kimerce.Backend.Infrastructure.SmartTable.SmartTableParam.IsExport">
+            <summary>
+            Có phải xuất dữ liệu hay không?
+            </summary>
+        </member>
+        <member name="T:Kimerce.Backend.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:Kimerce.Backend.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>
